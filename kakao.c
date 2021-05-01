@@ -102,3 +102,14 @@ int delete_kakao(Kakao * k){
 
 	return 1;
 }
+
+void save_data(Kakao * k[], int count){
+	FILE * fp;
+	fp = fopen("kakao.txt","wt");
+	for(int i=0; i<count; i++){
+		if(k[i]->birth_month==-1 || k[i]->birth_day==-1) continue;
+		fprintf(fp,"%s %d %d %d %d %s %s\n", k[i]->name, k[i]->birth_month, k[i]->birth_day, k[i]->is_kakaostory, k[i]->is_bookmark, k[i]->phone_num, k[i]->profile_music);
+	}
+	fclose(fp);
+	printf("=> 저장됨 !!\n");
+}

@@ -51,6 +51,7 @@ int main(){
 				printf("취소되었습니다 !!\n");
 			}
 		}
+		else if(menu == 5) save_data(k, index);
 		else if(menu == 0) break;
 	}
 
