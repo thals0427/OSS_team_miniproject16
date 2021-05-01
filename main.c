@@ -33,6 +33,11 @@ int main(){
 			count += add(k[index++]);
 		}
 		else if(menu == 2) list_k(k, index);
+		else if(menu == 3){
+			int num = update_num(k, index);
+			getchar();
+			update(k[num-1]);
+		}
 		else if(menu == 0) break;
 	}
 
