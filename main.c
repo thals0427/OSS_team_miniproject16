@@ -32,6 +32,7 @@ int main(){
 			k[index] = (Kakao *)malloc(sizeof(Kakao));
 			count += add(k[index++]);
 		}
+		else if(menu == 2) list_k(k, index);
 		else if(menu == 0) break;
 	}
 

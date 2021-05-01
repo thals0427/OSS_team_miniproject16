@@ -31,4 +31,21 @@ int add(Kakao * k){
 	int n2;
 	scanf("%d", &n2);
 	k->is_bookmark = n2;
+	return 1;
+}
+
+void read(Kakao k){
+	printf("%s %d월 %d일 ", k.name, k.birth_month, k.birth_day);
+	printf("[카스: %s] ", k.is_kakaostory ? "yes" : "no");
+	printf("[즐찾: %s] ", k.is_bookmark ? "yes" : "no");
+	printf("%s %s ", k.phone_num, k.profile_music);
+}
+
+void list_k(Kakao * k[], int index){
+	printf("No Name    Birthday  KakaoStory  Bookmark  PhoneNumber  ProfileMusic\n");
+	for(int i =0; i<index; i++){
+		if(k[i]->birth_month == -1 || k[i]->birth_day == -1) continue;
+		printf("%2d ", i+1);
+		read(*k[i]);
+	}
 }
