@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include "kakao.h"
 
 int add(Kakao * k){
@@ -14,20 +15,20 @@ int add(Kakao * k){
 	scanf("%d %d", &k->birth_month, &k->birth_day);
 
 	printf("추가할 친구의 카스 유무는? (No: 0) ");
-	scanf("%d", &k->is_kakaostory);
+	int n1;	
+	scanf("%d", &n1);
+	k->is_kakaostory = n1;   //bool 타입에 scanf가 안돼서 이렇게 해요!
 
-	printf("추가할 친구의 전화번호 유무는? (No: 0) ");
-	scanf("%d", &k->is_phone_num);
+	getchar();
+	printf("추가할 친구의 전화번호는? ");
+	scanf("%[^\n]s", k->phone_num);
 
-	if(is_phone_num){
-		getchar();
-		printf("추가할 친구의 전화번호는? ");
-		scanf("%[^\n]s", k->phone_num);
-	}
-
+	getchar();
 	printf("추가할 친구의 프로필뮤직은? ");
-	scanf("%[^\n]s", k->profine_music);
+	scanf("%[^\n]s", k->profile_music);
 
 	printf("추가할 친구의 즐겨찾기 유무는? (No: 0) ");
-	scanf("%d", &k->is_bookmark);
+	int n2;
+	scanf("%d", &n2);
+	k->is_bookmark = n2;
 }

@@ -6,4 +6,4 @@ all : $(TARGET)
 $(TARGET) : $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^
 clean : 
-	rm *.o kakao
+	rm *.o kakaolist
