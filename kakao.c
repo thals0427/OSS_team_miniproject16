@@ -86,3 +86,19 @@ int update(Kakao * k){
 	k->is_bookmark = n2;
 	return 1;
 }
+
+int delete_num(Kakao * k[], int index){
+	list_k(k, index);
+	printf("삭제할 친구 번호는? ");
+	int num;
+	scanf("%d", &num);
+	return num;
+}
+
+int delete_kakao(Kakao * k){
+	k->birth_month = -1;
+	k->birth_day = -1;
+	printf("=> 삭제됨 !!\n");
+
+	return 1;
+}
