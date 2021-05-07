@@ -21,6 +21,7 @@ int add(Kakao * k){
 
 	getchar();
 	printf("추가할 친구의 전화번호는? (ex: 010-xxxx-xxxx) ");
+	printf("추가할 친구의 전화번호는? ");
 	scanf("%[^\n]s", k->phone_num);
 
 	getchar();

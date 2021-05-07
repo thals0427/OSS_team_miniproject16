@@ -7,6 +7,7 @@ typedef struct Kakao{
 	bool is_kakaostory; //카카오 스토리 연동 유무
 	bool is_phone_num;  //전화번호 유무
         char phone_num[20]; //전화번호 
+        char phone_num[20]; //전화번호 (-빼고 저장)
 	char profile_music[200]; //프로필뮤직
 	bool is_bookmark;   //즐겨찾기 유무
 } Kakao;
