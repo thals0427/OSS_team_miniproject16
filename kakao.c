@@ -20,7 +20,7 @@ int add(Kakao * k){
 	k->is_kakaostory = n1;   //bool 타입에 scanf가 안돼서 이렇게 해요!
 
 	getchar();
-	printf("추가할 친구의 전화번호는? ");
+	printf("추가할 친구의 전화번호는? (ex: 010-xxxx-xxxx) ");
 	scanf("%[^\n]s", k->phone_num);
 
 	getchar();
