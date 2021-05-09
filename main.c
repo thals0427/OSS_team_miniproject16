@@ -10,7 +10,7 @@
 int select_menu(){
 	int menu;
 	printf("\n*************************\n");
-	printf("1. 친구 추가\n2. 친구 목록\n0. 종료\n");	
+	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n0. 종료\n");	
 	printf("*************************\n");
 	scanf("%d", &menu);
 	getchar();
@@ -33,6 +33,11 @@ int main(){
 			count += add(k[index++]);
 		}
 		if(menu == 2) list_k(k, index); 
+		else if(menu == 3){
+			int num = update_num(k, index);
+			getchar();
+			update(k[num-1]);
+		}
 		else if(menu == 0) break;
 	}
 
