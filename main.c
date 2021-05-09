@@ -10,7 +10,7 @@
 int select_menu(){
 	int menu;
 	printf("\n*************************\n");
-	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n0. 종료\n");	
+	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n4. 친구 삭제\n0. 종료\n");	
 	printf("*************************\n");
 	scanf("%d", &menu);
 	getchar();
@@ -37,6 +37,19 @@ int main(){
 			int num = update_num(k, index);
 			getchar();
 			update(k[num-1]);
+		}
+		else if(menu == 4){
+			int num = delete_num(k, index);
+			int check;
+			printf("정말로 삭제하시겠습니까? (삭제: 1) ");
+			scanf("%d", &check);
+			if(check == 1){
+				if(delete_kakao(k[num-1]))
+				count--;
+			}
+			else{
+				printf("취소되었습니다 !!\n");
+			}
 		}
 		else if(menu == 0) break;
 	}

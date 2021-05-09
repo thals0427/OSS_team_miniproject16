@@ -16,9 +16,13 @@ typedef struct Kakao{
 int add(Kakao * k); //친구 추가하는 함수, 정상적으로 추가되었으면 1을 리턴
 void read(Kakao k); //친구 한 명 출력하는 함수
 void list_k(Kakao * k[], int index); //친구 목록 출력하는 함수
+int update(Kakao * k); //친구 정보 수정하는 함수, 정상적으로 수정되었으면 1을 리턴 
+int update_num(Kakao * k[], int index); //수정할 친구 번호 고르는 함수
+
+int delete_num(Kakao * k[], int index); //삭제할 친구 번호 고르는 함수
+int delete_kakao(Kakao * k); //친구 삭제하는 함수, 정상적으로 삭제되었으면 1을 리턴
+
 
 #endif
 
-int update(Kakao * k); //친구 정보 수정하는 함수, 정상적으로 수정되었으면 1을 리턴 
-int update_num(Kakao * k[], int index); //수정할 친구 번호 고르는 함수
 
