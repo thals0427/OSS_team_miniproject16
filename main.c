@@ -6,12 +6,13 @@
 #include <stdbool.h>
 #include "kakao.h"
 #include "search.h"
+#include "file.h"
 #define SIZE 100
 
 int select_menu(){
 	int menu;
 	printf("\n*************************\n");
-	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n4. 친구 삭제\n5. 이름으로 친구 검색\n0. 종료\n");	
+	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n4. 친구 삭제\n5. 이름으로 친구 검색\n8. 파일로 저장\n9. 파일 불러오기\n0. 종료\n");	
 	printf("*************************\n");
 	scanf("%d", &menu);
 	getchar();
@@ -53,6 +54,11 @@ int main(){
 			}
 		}
 		else if(menu == 5) search_name(k, index);
+		else if(menu == 8) save_data(k, index);
+		else if(menu == 9){ 
+			index = load_data(k);
+			count = index;
+		}
 		else if(menu == 0) break;
 	}
 
