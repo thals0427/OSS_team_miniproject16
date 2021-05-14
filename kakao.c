@@ -52,7 +52,7 @@ void list_k(Kakao * k[], int index){
 
 int update_num(Kakao * k[], int index){
 	list_k(k, index);
-	printf("수정할 친구 번호는? ");
+	printf("\n수정할 친구 번호는? ");
 	int num;
 	scanf("%d", &num);
 	return num;
@@ -89,7 +89,7 @@ int update(Kakao * k){
 
 int delete_num(Kakao * k[], int index){
 	list_k(k, index);
-	printf("삭제할 친구 번호는? ");
+	printf("\n삭제할 친구 번호는? ");
 	int num;
 	scanf("%d", &num);
 	return num;

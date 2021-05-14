@@ -5,12 +5,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include "kakao.h"
+#include "search.h"
 #define SIZE 100
 
 int select_menu(){
 	int menu;
 	printf("\n*************************\n");
-	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n4. 친구 삭제\n0. 종료\n");	
+	printf("1. 친구 추가\n2. 친구 목록\n3. 친구 정보 수정\n4. 친구 삭제\n5. 이름으로 친구 검색\n0. 종료\n");	
 	printf("*************************\n");
 	scanf("%d", &menu);
 	getchar();
@@ -51,6 +52,7 @@ int main(){
 				printf("취소되었습니다 !!\n");
 			}
 		}
+		else if(menu == 5) search_name(k, index);
 		else if(menu == 0) break;
 	}
 
