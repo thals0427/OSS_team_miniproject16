@@ -54,6 +54,8 @@ int main(){
 			}
 		}
 		else if(menu == 5) search_name(k, index);
+		else if(menu == 6) search_bd(k, index);
+		else if(menu == 7) search_phone_num(k, index);
 		else if(menu == 8) save_data(k, index);
 		else if(menu == 9){ 
 			index = load_data(k);
